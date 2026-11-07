@@ -5,10 +5,13 @@ import { useAuraStore, AssetSymbol } from "../store/useAuraStore";
 import {
   Activity,
   Command,
+  Cpu,
+  Flame,
   Globe,
   Pause,
   Play,
   ShieldCheck,
+  User,
   Wallet,
 } from "lucide-react";
 
@@ -20,6 +23,8 @@ export default function TopNav() {
     holdings,
     isLiveStreamActive,
     isBinanceConnected,
+    workspace,
+    setWorkspace,
     toggleLang,
     toggleLiveStream,
     setCommandOpen,
@@ -141,11 +146,12 @@ export default function TopNav() {
             <span>{lang === "fa" ? "EN" : "فارسی"}</span>
           </button>
 
-          <div className="hidden sm:flex w-9 h-9 rounded-xl overflow-hidden border border-emerald-400/40 bg-slate-900 shrink-0 items-center justify-center">
+          <div className="hidden sm:flex relative w-9 h-9 rounded-xl overflow-hidden border border-emerald-400/40 bg-slate-900 shrink-0 items-center justify-center">
+            <Activity className="absolute inset-0 m-auto w-4 h-4 text-emerald-400" />
             <img
               src="/aurapulse/assets/pooya-fintech.webp"
               alt="Pooya Goodarzi"
-              className="w-full h-full object-cover"
+              className="relative z-10 w-full h-full object-cover"
               onError={(e) => {
                 const target = e.currentTarget;
                 if (target.src.includes("/aurapulse/assets/")) {
@@ -155,10 +161,40 @@ export default function TopNav() {
                 }
               }}
             />
-            <Activity className="w-4 h-4 text-emerald-400" />
           </div>
         </div>
       </div>
+
+      <nav
+        aria-label={lang === "fa" ? "بخش‌های برنامه" : "Workspace navigation"}
+        className="max-w-[1600px] mx-auto mt-2 flex items-center gap-1.5 overflow-x-auto pb-0.5"
+      >
+        {[
+          { id: "TERMINAL", en: "Terminal", fa: "ترمینال", icon: Activity },
+          { id: "HEATMAP", en: "Market Overview", fa: "نمای بازار", icon: Flame },
+          { id: "AILAB", en: "Scenario Lab", fa: "آزمایش سناریو", icon: Cpu },
+          { id: "ARCHITECT", en: "About", fa: "درباره", icon: User },
+        ].map((item) => {
+          const Icon = item.icon;
+          const active = workspace === item.id;
+          return (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => setWorkspace(item.id as "TERMINAL" | "HEATMAP" | "AILAB" | "ARCHITECT")}
+              aria-pressed={active}
+              className={`min-h-10 shrink-0 inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-[11px] font-semibold transition-colors ${
+                active
+                  ? "border-emerald-400/50 bg-emerald-400/15 text-emerald-200"
+                  : "border-white/10 bg-white/[0.03] text-slate-400 hover:border-white/20 hover:text-white"
+              }`}
+            >
+              <Icon className="h-3.5 w-3.5" />
+              <span>{lang === "fa" ? item.fa : item.en}</span>
+            </button>
+          );
+        })}
+      </nav>
     </header>
   );
 }
