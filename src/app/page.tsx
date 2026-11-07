@@ -34,6 +34,8 @@ export default function AuraPulseTerminalPage() {
     applyBinanceTickerData,
     setBinanceConnected,
     hydratePaperAccount,
+    isAutoBotActive,
+    toggleAutoBot,
     isBinanceConnected,
   } = useAuraStore();
 
@@ -92,9 +94,14 @@ export default function AuraPulseTerminalPage() {
           }
         });
 
+        const hasCompleteFeed =
+          updates["BTC/USD"] !== undefined &&
+          updates["ETH/USD"] !== undefined &&
+          updates["SOL/USD"] !== undefined;
+
         if (active) {
-          if (Object.keys(updates).length > 0) applyBinanceTickerData(updates);
-          else setBinanceConnected(false);
+          if (hasCompleteFeed) applyBinanceTickerData(updates);
+          setBinanceConnected(hasCompleteFeed);
         }
       } catch (error) {
         if (active && !(error instanceof DOMException && error.name === "AbortError")) {
@@ -177,8 +184,8 @@ export default function AuraPulseTerminalPage() {
                 <Flame className="w-5 h-5 text-emerald-400" />
                 <h2 className="text-base font-bold text-white">
                   {lang === "fa"
-                    ? "نقشه بازار و نمایش وضعیت داده‌های آزمایشی"
-                    : "Market Data & Paper-Trading Heatmap"}
+                    ? "نمای کلی بازار"
+                    : "Market Overview"}
                 </h2>
               </div>
               <span className="text-xs font-mono text-cyan-300">
@@ -245,8 +252,8 @@ export default function AuraPulseTerminalPage() {
                   <Cpu className="w-5 h-5 text-cyan-400" />
                   <h2 className="text-base font-bold text-white">
                     {lang === "fa"
-                      ? "موتور بک‌تست مونت‌کارلو و تحلیل شبکه عصبی"
-                      : "Neural Monte-Carlo Strategy Backtester"}
+                      ? "آزمایشگاه سناریوهای محلی بازار"
+                      : "Local Market Scenario Lab"}
                   </h2>
                 </div>
                 <span className="font-mono text-xs px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
@@ -254,24 +261,49 @@ export default function AuraPulseTerminalPage() {
                 </span>
               </div>
 
+              <p className="text-xs leading-6 text-slate-400">
+                {lang === "fa"
+                  ? "این بخش فقط سناریوهای ساختگی را روی قیمت‌های نمایشی و حساب آزمایشی محلی اجرا می‌کند. مدل هوش مصنوعی، بک‌تست تاریخی یا سفارش واقعی به صرافی در کار نیست."
+                  : "This lab applies illustrative price scenarios to the local demo workspace only. It does not train an AI model, backtest historical market data, or send real exchange orders."}
+              </p>
+
               <div className="flex flex-wrap gap-2 pt-2">
                 <button
                   onClick={() => triggerMarketShock("PUMP")}
                   className="btn-cyber-active px-4 py-2.5 rounded-xl font-mono text-xs font-bold"
                 >
+                  {lang === "fa" ? "شبیه‌سازی جهش قیمت" : "Simulate Bullish Move"}
+                </button>
+                <button
+                  onClick={() => triggerMarketShock("CRASH")}
+                  className="btn-cyber-danger px-4 py-2.5 rounded-xl font-mono text-xs font-bold"
+                >
+                  {lang === "fa" ? "شبیه‌سازی ریزش قیمت" : "Simulate Market Drop"}
+                </button>
+                <button
+                  type="button"
+                  onClick={toggleAutoBot}
+                  className="btn-cyber px-4 py-2.5 rounded-xl font-mono text-xs font-bold"
+                  aria-pressed={isAutoBotActive}
+                >
                   {lang === "fa"
-                    ? "اجرای تست استرس صعودی"
-                    : "Run Bullish Stress Simulation"}
+                    ? isAutoBotActive ? "توقف خرید خودکار آزمایشی" : "فعال‌سازی خرید خودکار آزمایشی"
+                    : isAutoBotActive ? "Pause Demo Auto-Buy" : "Start Demo Auto-Buy"}
                 </button>
                 <button
                   onClick={() => setWorkspace("TERMINAL")}
                   className="btn-cyber px-4 py-2.5 rounded-xl font-mono text-xs font-bold"
                 >
-                  {lang === "fa"
-                    ? "بازگشت به داشبورد بازار"
-                    : "Return to Market Dashboard"}
+                  {lang === "fa" ? "بازگشت به ترمینال" : "Return to Terminal"}
                 </button>
               </div>
+              {isAutoBotActive && (
+                <p className="text-[11px] leading-5 text-amber-200/90">
+                  {lang === "fa"
+                    ? "خرید خودکار روشن است: شبیه‌ساز هر حدود ۱۴ ثانیه یک سفارش خرید آزمایشی ۴۰۰ دلاری با اهرم ۱ ثبت می‌کند تا وقتی موجودی کافی باشد. برای توقف از همین دکمه استفاده کن."
+                    : "Auto-buy is active: the local simulator attempts a $400, 1x paper BUY about every 14 seconds while cash is available. Use this button to stop it."}
+                </p>
+              )}
             </div>
 
             <div className="lg:col-span-5 cyber-card rounded-2xl border border-white/15 p-5 space-y-3">
