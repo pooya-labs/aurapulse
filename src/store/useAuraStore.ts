@@ -573,7 +573,7 @@ const applyBinanceTickerData = (
   });
 
   if (applied > 0) {
-    setState(() => ({ assets: nextAssets, isBinanceConnected: true }));
+    setState(() => ({ assets: nextAssets }));
   }
 };
 
@@ -758,7 +758,7 @@ const tickMarket = () => {
     let nextBalance = state.balanceUSD;
     let nextLogs = state.aiLogs;
 
-    if (state.isAutoBotActive && tickCounter % 2 === 0 && state.balanceUSD > 500) {
+    if (state.isAutoBotActive && tickCounter % 10 === 0 && state.balanceUSD > 500) {
       const activeSym = state.selectedSymbol;
       const activePrice = updatedAssets[activeSym].price;
       const tradeUSD = 400;
