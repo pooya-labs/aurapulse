@@ -17,6 +17,8 @@ export default function TradeTicketPanel() {
     assets,
     balanceUSD,
     holdings,
+    selectedOrderBookPrice,
+    setSelectedOrderBookPrice,
     executeOrder,
   } = useAuraStore();
 
@@ -31,13 +33,14 @@ export default function TradeTicketPanel() {
   } | null>(null);
 
   const numericUSD = parseFloat(usdInput) || 0;
-  const estimatedUnits = (numericUSD / activeAsset.price).toFixed(4);
+  const executionPrice = selectedOrderBookPrice ?? activeAsset.price;
+  const estimatedUnits = (numericUSD / executionPrice).toFixed(6);
 
   const handlePercentage = (pct: number) => {
     if (side === "BUY") {
       setUsdInput(Math.floor((balanceUSD * pct) / (100 * 1.001)).toString());
     } else {
-      const maxSellUSD = userUnits * activeAsset.price;
+      const maxSellUSD = userUnits * executionPrice;
       setUsdInput(Math.floor((maxSellUSD * pct) / 100).toString());
     }
   };
@@ -158,14 +161,32 @@ export default function TradeTicketPanel() {
             </div>
             <div className="flex justify-between text-slate-400">
               <span>{lang === "fa" ? "قیمت اجرا:" : "Fill Price:"}</span>
-              <span className="text-cyan-400">
-                ${activeAsset.price.toLocaleString("en-US")}
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-cyan-400">
+                  ${executionPrice.toLocaleString("en-US")}
+                </span>
+                {selectedOrderBookPrice !== null && (
+                  <button
+                    type="button"
+                    onClick={() => setSelectedOrderBookPrice(null)}
+                    className="rounded-md border border-cyan-400/25 px-2 py-1 text-[10px] text-cyan-200 hover:bg-cyan-500/10"
+                  >
+                    {lang === "fa" ? "قیمت بازار" : "Use market"}
+                  </button>
+                )}
+              </div>
             </div>
             <div className="flex justify-between text-slate-400">
               <span>{lang === "fa" ? "کارمزد نمونه:" : "Demo fee:"}</span>
               <span className="text-emerald-400">0.10% • local</span>
             </div>
+            {selectedOrderBookPrice !== null && (
+              <p className="text-[10px] leading-5 text-amber-200/90">
+                {lang === "fa"
+                  ? "قیمت انتخاب‌شده از دفتر سفارش، قیمت اجرای فوری در شبیه‌ساز محلی است؛ این سفارش محدود واقعی نیست."
+                  : "The selected book level is used as an immediate local paper fill price; this is not a real limit order."}
+              </p>
+            )}
           </div>
 
           <button
