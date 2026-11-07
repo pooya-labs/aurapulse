@@ -371,7 +371,7 @@ export default function AuraPulseTerminalPage() {
               </div>
 
               <a
-                href="https://pooya16pg-spec.github.io/pooya-os/"
+                href="https://pooya-labs.github.io/pooya-os/"
                 target="_blank"
                 rel="noreferrer"
                 className="btn-cyber-active flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-xs shrink-0"
