@@ -1,7 +1,7 @@
 # AuraPulse — Market Data & Paper-Trading Studio
 
 **Author:** Pooya Goodarzi  
-**Live demo:** [Open AuraPulse](https://pooya16pg-spec.github.io/aurapulse/)  
+**Live demo:** [Open AuraPulse](https://pooya-labs.github.io/aurapulse/)  
 **Repository:** [pooya-labs/aurapulse](https://github.com/pooya-labs/aurapulse)
 
 AuraPulse is a browser-based market dashboard and paper-trading workspace. It combines a read-only public quote feed with an independent local simulator so the data source and simulated trading activity remain clearly separated.
