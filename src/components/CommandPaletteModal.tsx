@@ -64,8 +64,8 @@ export default function CommandPaletteModal() {
       id: "stream",
       label:
         lang === "fa"
-          ? "توقف / شروع استریم لحظه‌ای قیمت‌ها"
-          : "Toggle Live Market Data Stream",
+          ? "توقف / ادامه شبیه‌ساز محلی"
+          : "Pause / Resume Local Demo Simulator",
       icon: Command,
       run: () => toggleLiveStream(),
     },
