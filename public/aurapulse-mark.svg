@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="AuraPulse mark">
+  <defs>
+    <linearGradient id="aura" x1="18" y1="12" x2="108" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A7FFF0"/><stop offset=".48" stop-color="#34D399"/><stop offset="1" stop-color="#0891B2"/>
+    </linearGradient>
+    <linearGradient id="trace" x1="18" y1="64" x2="110" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9" stop-opacity=".15"/><stop offset=".5" stop-color="#A7F3D0"/><stop offset="1" stop-color="#22D3EE" stop-opacity=".2"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="31" fill="#07151A" stroke="#5EEAD4" stroke-opacity=".26" stroke-width="2"/>
+  <path d="M18 68h19l10-24 16 43 13-31 9 12h25" fill="none" stroke="url(#aura)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 91h92" stroke="url(#trace)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="105" cy="68" r="4.5" fill="#A7FFF0"/>
+  <circle cx="105" cy="68" r="10" fill="#34D399" opacity=".14"/>
+</svg>
