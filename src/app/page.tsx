@@ -388,6 +388,55 @@ export default function AuraPulseTerminalPage() {
         )}
       </main>
 
+      <footer
+        dir={lang === "fa" ? "rtl" : "ltr"}
+        className="relative mt-auto border-t border-white/10 bg-[#03080D]/95 px-4 sm:px-6 lg:px-8 py-7 sm:py-9"
+      >
+        <div className="mx-auto flex w-full max-w-[1720px] flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-emerald-300/20 bg-emerald-300/[0.06] p-2">
+              <img
+                src="/aurapulse/brand/pooya-mark.svg"
+                alt="Pooya Labs"
+                className="h-full w-full object-contain"
+                loading="lazy"
+              />
+            </div>
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-white">
+                {lang === "fa" ? "ساخته‌شده توسط پویا گودرزی" : "Built by Pooya Goodarzi"}
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                {lang === "fa" ? "بخشی از اکوسیستم Pooya Labs" : "Part of the Pooya Labs ecosystem"}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            <a
+              href="https://github.com/pooya-labs"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-2 text-xs font-medium text-slate-200 transition hover:border-emerald-300/40 hover:bg-emerald-300/10 hover:text-white"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+                <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.08c-3.1.68-3.76-1.31-3.76-1.31-.5-1.3-1.24-1.65-1.24-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.93.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.24-5.1 5.52.4.35.75 1.03.75 2.08v3.1c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/>
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://pooya-labs.github.io/pooya-labs-platform/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-emerald-300/20 bg-emerald-300/[0.07] px-3.5 py-2 text-xs font-semibold text-emerald-100 transition hover:border-emerald-300/50 hover:bg-emerald-300/15"
+            >
+              <img src="/aurapulse/brand/pooya-mark.svg" alt="" className="h-4 w-4 object-contain" loading="lazy" />
+              Pooya Labs Platform
+            </a>
+          </div>
+        </div>
+      </footer>
+
       <CommandPaletteModal />
     </div>
   );
