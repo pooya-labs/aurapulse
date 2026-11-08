@@ -396,7 +396,7 @@ export default function AuraPulseTerminalPage() {
           <div className="flex items-center gap-3 min-w-0">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-emerald-300/20 bg-emerald-300/[0.06] p-2">
               <img
-                src="/aurapulse/brand/pooya-mark.svg"
+                src="https://raw.githubusercontent.com/pooya-labs/pooya-labs-platform/main/apps/platform/public/brand/pooya-monogram.webp"
                 alt="Pooya Labs"
                 className="h-full w-full object-contain"
                 loading="lazy"
@@ -430,7 +430,7 @@ export default function AuraPulseTerminalPage() {
               rel="noreferrer"
               className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-emerald-300/20 bg-emerald-300/[0.07] px-3.5 py-2 text-xs font-semibold text-emerald-100 transition hover:border-emerald-300/50 hover:bg-emerald-300/15"
             >
-              <img src="/aurapulse/brand/pooya-mark.svg" alt="" className="h-4 w-4 object-contain" loading="lazy" />
+              <img src="https://raw.githubusercontent.com/pooya-labs/pooya-labs-platform/main/apps/platform/public/brand/pooya-monogram.webp" alt="" className="h-4 w-4 object-contain" loading="lazy" />
               Pooya Labs Platform
             </a>
           </div>
