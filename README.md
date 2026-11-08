@@ -49,6 +49,16 @@ The published project is a portfolio/demo experience, not a financial service or
 
 ---
 
+## Latest project update — 8 November 2026
+
+The latest interface pass completed the AuraPulse brand mark, browser favicon, and navigation identity, and connected the footer ownership mark to the Pooya Labs Platform. The paper-trading account and its local-only persistence remain simulated; the public Binance feed remains read-only and availability-dependent.
+
+## Project ownership
+
+<p align="center"><a href="https://pooya-labs.github.io/pooya-labs-platform/"><img src="https://raw.githubusercontent.com/pooya-labs/pooya-labs-platform/main/apps/platform/public/brand/pooya-monogram.webp" alt="Pooya Labs Platform monogram" width="64" /></a></p>
+
+**Owned and maintained by [Pooya Labs Platform](https://pooya-labs.github.io/pooya-labs-platform/).** Project direction and engineering: **Pooya Goodarzi**.
+
 ## راهنمای فارسی
 
 ### معرفی
@@ -87,3 +97,13 @@ npm run build
 ### انتشار
 
 نسخهٔ استاتیک با GitHub Actions از شاخهٔ `main` ساخته و روی GitHub Pages منتشر می‌شود. این پروژه صرفاً یک نمونهٔ مهندسی و آموزشی است و توصیهٔ سرمایه‌گذاری ارائه نمی‌کند.
+
+### آخرین تغییرات — ۸ نوامبر ۲۰۲۶
+
+در آخرین به‌روزرسانی، نشان اختصاصی AuraPulse، آیکون تب مرورگر و هویت بصری ناوبری تکمیل شد و نشان مالکیت در فوتر به پلتفرم پویا لبز پیوند خورد. حساب معامله‌گری همچنان کاملاً آزمایشی و محلی است؛ داده‌های عمومی بایننس فقط خواندنی‌اند و به دسترسی API وابسته‌اند.
+
+### مالکیت و نگه‌داری
+
+<p align="center"><a href="https://pooya-labs.github.io/pooya-labs-platform/"><img src="https://raw.githubusercontent.com/pooya-labs/pooya-labs-platform/main/apps/platform/public/brand/pooya-monogram.webp" alt="نشان مونوگرام پویا لبز" width="64" /></a></p>
+
+**مالک و نگه‌دارنده: [پلتفرم پویا لبز](https://pooya-labs.github.io/pooya-labs-platform/)** · طراحی و توسعه: **پویا گودرزی**.
