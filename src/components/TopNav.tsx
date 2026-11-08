@@ -44,14 +44,7 @@ export default function TopNav() {
       <div className="max-w-[1600px] mx-auto grid grid-cols-[minmax(0,1fr)_auto] sm:flex sm:flex-wrap items-center justify-between gap-2 sm:gap-3">
         <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           <div className="flex items-center gap-2 px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 min-w-0">
-            <span className="relative flex h-2.5 w-2.5">
-              <span
-                className={`absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 ${
-                  isLiveStreamActive ? "animate-ping" : ""
-                }`}
-              />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400" />
-            </span>
+            <img src="/aurapulse/aurapulse-mark.svg" alt="" className="h-7 w-7 shrink-0 object-contain" />
             <span className="font-mono font-bold tracking-wider text-white text-sm shrink-0">
               AuraPulse
             </span>
