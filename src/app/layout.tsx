@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "AuraPulse | Pooya Goodarzi — FinTech & Quant Analytics Terminal",
   description:
     "Responsive market-data and local paper-trading workspace by Pooya Goodarzi.",
+  icons: { icon: "/aurapulse/aurapulse-mark.svg", shortcut: "/aurapulse/aurapulse-mark.svg" },
 };
 
 export default function RootLayout({
