@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Pooya Labs P monogram">
+  <defs>
+    <linearGradient id="mark-main" x1="20" y1="12" x2="108" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C4FFF2"/><stop offset=".27" stop-color="#75E8CB"/><stop offset=".68" stop-color="#35C99A"/><stop offset="1" stop-color="#16886F"/>
+    </linearGradient>
+    <linearGradient id="mark-fold" x1="48" y1="46" x2="94" y2="92" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9CFFE5"/><stop offset=".55" stop-color="#49DCC0"/><stop offset="1" stop-color="#2B9CC0"/>
+    </linearGradient>
+    <linearGradient id="mark-orbit" x1="12" y1="94" x2="118" y2="86" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#45D4B5" stop-opacity=".04"/><stop offset=".5" stop-color="#75F1D6" stop-opacity=".72"/><stop offset="1" stop-color="#4B9FF1" stop-opacity=".08"/>
+    </linearGradient>
+    <filter id="mark-glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="2.6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 .06 0 0 0 0 .72 0 0 0 0 .48 0 0 0 .33 0" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <path d="M15 91C28 113 69 121 99 101C111 92 117 77 113 63" fill="none" stroke="url(#mark-orbit)" stroke-width="2.1" stroke-linecap="round"/>
+  <g filter="url(#mark-glow)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M31 105V27C31 20 37 14 45 14H74C96 14 110 28 110 49C110 70 96 84 74 84H52" stroke="url(#mark-main)" stroke-width="15"/>
+    <path d="M52 84L88 49" stroke="url(#mark-fold)" stroke-width="15"/>
+    <path d="M40 22H73C91 22 101 31 104 47" stroke="#E6FFF8" stroke-opacity=".58" stroke-width="2.1"/>
+    <path d="M47 91L63 76" stroke="#B7FFF0" stroke-opacity=".42" stroke-width="2.3"/>
+  </g>
+  <circle cx="113" cy="63" r="4" fill="#8BF2D8"/>
+  <circle cx="113" cy="63" r="8.5" fill="#67E7CF" opacity=".13"/>
+</svg>
