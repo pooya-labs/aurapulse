@@ -59,7 +59,7 @@ The latest interface pass completed the AuraPulse brand mark, browser favicon, a
 
 **Project owner and author: Pooya Goodarzi.** The official owner profile and project directory is **[Pooya Labs Platform](https://pooya-labs.github.io/pooya-labs-platform/)**. Select the monogram above to open the platform.
 
-**Use permission:** Pooya Goodarzi grants everyone a non-exclusive, worldwide permission to use, copy, modify, and redistribute this project's original code and documentation, including for commercial purposes. Ownership of the original work remains with Pooya Goodarzi. This permission does not cover third-party materials, which remain subject to their owners' terms.
+**Use permission:** Pooya Goodarzi grants everyone a non-exclusive, worldwide permission to use, copy, modify, and redistribute this project's original code and documentation, including for commercial purposes. Ownership of the original work remains with Pooya Goodarzi. This permission does not cover third-party materials, which remain subject to their owners' terms. Pooya Labs Platform and its code, content, and brand assets are expressly excluded and remain reserved exclusively to Pooya Goodarzi.
 
 ## راهنمای فارسی
 
@@ -110,4 +110,4 @@ npm run build
 
 **مالک و پدیدآورندهٔ پروژه: پویا گودرزی.** وب‌سایت رسمی معرفی مالک و درگاه نمایش پروژه‌ها، **[پلتفرم پویا لبز](https://pooya-labs.github.io/pooya-labs-platform/)** است. با انتخاب نشان بالا مستقیماً وارد این وب‌سایت می‌شوید.
 
-**اجازهٔ استفاده:** پویا گودرزی به همه اجازه‌ای غیرانحصاری و جهانی برای استفاده، کپی، تغییر و بازنشر کدها و مستندات اصیل این پروژه، از جمله برای مقاصد تجاری، می‌دهد. مالکیت آثار اصیل همچنان متعلق به پویا گودرزی است. این اجازه شامل دارایی‌های اشخاص ثالث نمی‌شود و آن‌ها تابع شرایط صاحبان خود هستند.
+**اجازهٔ استفاده:** پویا گودرزی به همه اجازه‌ای غیرانحصاری و جهانی برای استفاده، کپی، تغییر و بازنشر کدها و مستندات اصیل این پروژه، از جمله برای مقاصد تجاری، می‌دهد. مالکیت آثار اصیل همچنان متعلق به پویا گودرزی است. این اجازه شامل دارایی‌های اشخاص ثالث نمی‌شود و آن‌ها تابع شرایط صاحبان خود هستند. پلتفرم پویا لبز و کدها، محتوا و دارایی‌های برند آن صراحتاً از این اجازه مستثنا هستند و به‌صورت انحصاری برای پویا گودرزی محفوظ می‌مانند.
