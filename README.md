@@ -57,7 +57,13 @@ The latest interface pass completed the AuraPulse brand mark, browser favicon, a
 
 <p align="center"><a href="https://pooya-labs.github.io/pooya-labs-platform/"><img src="https://raw.githubusercontent.com/pooya-labs/pooya-labs-platform/main/apps/platform/public/brand/pooya-monogram-tile.svg" alt="Pooya Labs Platform monogram" width="96" /></a></p>
 
-**Owned and maintained by [Pooya Labs Platform](https://pooya-labs.github.io/pooya-labs-platform/).** Project direction and engineering: **Pooya Goodarzi**.
+## Project ownership
+
+<p align="center"><a href="https://pooya-labs.github.io/pooya-labs-platform/"><img src="https://raw.githubusercontent.com/pooya-labs/pooya-labs-platform/main/apps/platform/public/brand/pooya-monogram-tile.svg" alt="Pooya Monogram — official owner mark" width="96" /></a></p>
+
+**Project owner and author: Pooya Goodarzi.** The official owner profile and project directory is **[Pooya Labs Platform](https://pooya-labs.github.io/pooya-labs-platform/)**. Select the monogram above to open the platform.
+
+Original project code and creative work are owned by Pooya Goodarzi unless a specific third-party notice or separate agreement states otherwise. Third-party libraries, fonts, images, trademarks, and other assets remain subject to their respective licenses and ownership terms. No open-source license is granted by this attribution notice.
 
 ## راهنمای فارسی
 
@@ -106,4 +112,10 @@ npm run build
 
 <p align="center"><a href="https://pooya-labs.github.io/pooya-labs-platform/"><img src="https://raw.githubusercontent.com/pooya-labs/pooya-labs-platform/main/apps/platform/public/brand/pooya-monogram-tile.svg" alt="نشان مونوگرام پویا لبز" width="96" /></a></p>
 
-**مالک و نگه‌دارنده: [پلتفرم پویا لبز](https://pooya-labs.github.io/pooya-labs-platform/)** · طراحی و توسعه: **پویا گودرزی**.
+### مالکیت پروژه
+
+<p align="center"><a href="https://pooya-labs.github.io/pooya-labs-platform/"><img src="https://raw.githubusercontent.com/pooya-labs/pooya-labs-platform/main/apps/platform/public/brand/pooya-monogram-tile.svg" alt="نشان رسمی مونوگرام پویا" width="96" /></a></p>
+
+**مالک و پدیدآورندهٔ پروژه: پویا گودرزی.** وب‌سایت رسمی معرفی مالک و درگاه نمایش پروژه‌ها، **[پلتفرم پویا لبز](https://pooya-labs.github.io/pooya-labs-platform/)** است. با انتخاب نشان بالا مستقیماً وارد این وب‌سایت می‌شوید.
+
+کدها و آثار اصیل این پروژه متعلق به پویا گودرزی هستند؛ مگر آن‌که برای مورد مشخصی، اعلان حقوقی شخص ثالث یا توافق جداگانه‌ای وجود داشته باشد. کتابخانه‌ها، فونت‌ها، تصاویر، علائم تجاری و سایر دارایی‌های متعلق به دیگران تابع مجوز و حقوق صاحبان اصلی خود باقی می‌مانند. این متن به‌تنهایی هیچ مجوز متن‌بازی اعطا نمی‌کند.
