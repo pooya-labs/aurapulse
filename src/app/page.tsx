@@ -217,6 +217,7 @@ export default function AuraPulseTerminalPage() {
                         {sym}
                       </span>
                       <span
+                        dir="ltr"
                         className={`font-mono text-xs px-2.5 py-1 rounded-full font-bold ${
                           up
                             ? "bg-emerald-400 text-slate-950"
