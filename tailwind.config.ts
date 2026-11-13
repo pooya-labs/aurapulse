@@ -5,12 +5,13 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        carbon: "#05070B",
-        panel: "#0B0F17",
+        carbon: "#020408",
+        panel: "#080D1A",
         emerald: {
           400: "#10B981",
           500: "#059669",
@@ -19,8 +20,13 @@ const config: Config = {
           400: "#00F0FF",
         },
       },
+      fontFamily: {
+        sans: ["Vazirmatn", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
     },
   },
   plugins: [],
 };
+
 export default config;
