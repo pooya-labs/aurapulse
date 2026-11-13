@@ -168,6 +168,7 @@ export default function LiveCanvasChart() {
               >
                 <span className="font-bold">{sym}</span>
                 <span
+                  dir="ltr"
                   className={
                     active
                       ? "text-slate-950 font-extrabold"
@@ -221,6 +222,7 @@ export default function LiveCanvasChart() {
                   })}
             </h2>
             <span
+              dir="ltr"
               className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-mono font-bold ${
                 isPositive
                   ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/40"
